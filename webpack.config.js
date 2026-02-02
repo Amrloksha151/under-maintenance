@@ -3,10 +3,10 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
     entry: {
-        main: "./src/main.js",
-        join: "./src/join.js",
-        dev: "./src/dev.js",
-        contact: "./src/contact.js"
+        main: "./src/assets/main.js",
+        join: "./src/assets/join.js",
+        dev: "./src/assets/dev.js",
+        contact: "./src/assets/contact.js"
     },
     output: {
         path: path.resolve(import.meta.dirname, "dist"),
@@ -45,6 +45,14 @@ export default {
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.(png|jpg|jpeg)$/i,
+                type: "asset/resource"
+            },
+            {
+                test: /\.html$/i,
+                use: ["html-loader"]
             }
         ]
     },

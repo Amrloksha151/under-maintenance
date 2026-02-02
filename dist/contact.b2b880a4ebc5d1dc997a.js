@@ -10,10 +10,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/join.js"
-/*!*********************!*\
-  !*** ./src/join.js ***!
-  \*********************/
+/***/ "./src/assets/contact.js"
+/*!*******************************!*\
+  !*** ./src/assets/contact.js ***!
+  \*******************************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -44,7 +44,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/join.js"](0,__webpack_exports__,__webpack_require__);
+/******/ 	__webpack_modules__["./src/assets/contact.js"](0,__webpack_exports__,__webpack_require__);
 /******/ 	
 /******/ })()
 ;
