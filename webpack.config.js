@@ -48,7 +48,10 @@ export default {
             },
             {
                 test: /\.(png|jpg|jpeg)$/i,
-                type: "asset/resource"
+                type: "asset/resource",
+                generator: {
+                    filename: "images/[name].[hash][ext]"
+                }
             },
             {
                 test: /\.html$/i,
