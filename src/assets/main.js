@@ -1,5 +1,6 @@
 import './bootstrap.min.css';
 import './nav.css';
+import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 import { ImageAnimator } from './modules/animate.js'
 import Alert from "./modules/alerts.js"
