@@ -14,7 +14,7 @@ function main() {
         "warning",
         "main"
     );
-    joinAlert.messageAlert();
+    // joinAlert.messageAlert();
 }
 
 $(main())
