@@ -13,6 +13,7 @@ function main() {
             "body"
         );
         submittedAlert.popupAlert();
+        return;
     }
 
     const formAlert = new Alert(

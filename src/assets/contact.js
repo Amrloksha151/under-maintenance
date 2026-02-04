@@ -10,9 +10,10 @@ function main() {
             "Thank you for contacting us! We will get back to you soon.",
             "success",
             "dark",
-            ".toast-container"
+            "body"
         );
         submittedAlert.popupAlert();
+        return;
     }
 }
 
