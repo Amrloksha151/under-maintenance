@@ -9,7 +9,7 @@ function main() {
     animator.breathe("41vh", "auto");
     const joinAlert = new Alert(
         "📢We are hiring!!📢",
-        "We are preparing for the upcoming year and looking forward to escalate our infrastructure and add more features and capabilities.\nIf you want to become a part of the next season team, navigate to /dev/join.",
+        "We are preparing for the upcoming year and looking forward to escalate our infrastructure and add more features and capabilities.\nIf you want to become a part of the next season team, navigate to /join.html",
         "",
         "",
         ".toast-container"

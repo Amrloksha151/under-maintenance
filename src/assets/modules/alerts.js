@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import logo from '../images/logo.png';
+import lineman from '../images/lineman2.png';
 import { intervalToDuration } from 'date-fns';
 
 class Alert {
@@ -24,15 +24,16 @@ class Alert {
 
     toastAlert() {
         const toastID = crypto.randomUUID()
-        let toastElement = $(`
+        const toastElement = $(`
         <div class="toast fade show" id="${toastID}" role="alert" aria-live="assertive" aria-atomic="true"
             style="min-width: 300px; background: #23272b; color: #f8f9fa; border: 1px solid #343a40; top: 30px;">
             <div class="toast-header" style="background: #343a40; color: #f8f9fa;">
-            <img src="${logo}" class="rounded me-2" alt="Gharbiya STEM" width="40px" height="40px">
+            <img src="${lineman}" class="rounded me-2" alt="Gharbiya STEM" width="40px" height="40px">
             <strong class="me-auto">${this.title}</strong>
+            <small class="text-body-secondary">${intervalToDuration({start: new Date("2026-02-01"), end: Date.now()}).days} days ago</small>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-            <div class="toast-body ${this.color[0]} ${this.color[1]}">
+            <div class="toast-body">
             ${this.message}
             </div>
         </div>
