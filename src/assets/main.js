@@ -1,6 +1,5 @@
 import './bootstrap.min.css';
 import './nav.css';
-import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 import { ImageAnimator } from './modules/animate.js'
 import Alert from "./modules/alerts.js"
@@ -11,11 +10,11 @@ function main() {
     const joinAlert = new Alert(
         "📢We are hiring!!📢",
         "We are preparing for the upcoming year and looking forward to escalate our infrastructure and add more features and capabilities.\nIf you want to become a part of the next season team, navigate to /dev/join.",
-        "info",
-        "warning",
-        "main"
+        "",
+        "",
+        ".toast-container"
     );
-    // joinAlert.messageAlert();
+    joinAlert.toastAlert();
 }
 
 $(main())
