@@ -30,7 +30,7 @@ class Alert {
             <div class="toast-header" style="background: #343a40; color: #f8f9fa;">
             <img src="${lineman}" class="rounded me-2" alt="Gharbiya STEM" width="40px" height="40px">
             <strong class="me-auto">${this.title}</strong>
-            <small class="text-body-secondary">${intervalToDuration({start: new Date("2026-02-01"), end: Date.now()}).days} days ago</small>
+            <small class="text-body-secondary">${intervalToDuration({start: new Date("2026-02-03"), end: Date.now()}).days} days ago</small>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
@@ -44,13 +44,32 @@ class Alert {
         });
     }
 
-    alertBox() {
-        
-    }
-
     popupAlert() {
-        
+        const modalID = crypto.randomUUID();
+        const modalElement = $(`
+        <div class="modal fade show" id="${modalID}" tabindex="-1" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content ${this.color.join(" ")}">
+            <div class="modal-header">
+                <h5 class="modal-title">${this.title}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ${this.message}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        `);
+        $(this.parent).append(modalElement);
+        $(`#${modalID} .btn-close, #${modalID} .btn-secondary`).on('click', function() {
+            $(`#${modalID}`).remove();
+        });
     }
+    
 }
 
 export default Alert;

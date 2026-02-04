@@ -28,7 +28,7 @@
     "webpack-dev-server": "^5.2.3"
   },
   "dependencies": {
-    "bootstrap": "^5.3.8",
+    "date-fns": "^4.1.0",
     "jquery": "^4.0.0",
     "popper.js": "^1.16.1"
   }
